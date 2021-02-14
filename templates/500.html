@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content%}
+<!-- 500 error page content -->
+<div class="row ml-1">
+        <div class="col-sm-6 mb-4">
+            <div><h2 class="other-error-content">Something Went Wrong!</h2></div>
+            <div class="error-content mt-4">
+                <p>Oops it looks like something went wrong</p>
+                <p>Lets get you back to what you where doing </p>
+                <!-- links to bring user back into journey from the error page -->
+                <p class="mt-4"><a class="btn btn-info" title="Home" href=" {{ url_for('index') }} ">Take Me Back to Home</a>
+                <a class="btn btn-info" title="My Reviews" href=" {{ url_for('my_reviews') }} ">Take Me To My Reivews</a></p>
+    
+                
+            </div>
+        </div>
+        <div class="col-sm-6"><img src="{{ url_for('static', filename='img/404_b.png') }}" alt="" class="img-fluid"></div>
+        
+    </div>
+
+{% endblock %}
